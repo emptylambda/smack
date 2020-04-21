@@ -77,6 +77,11 @@ const llvm::cl::opt<LLVMAssumeType> SmackOptions::LLVMAssumes(
                      clEnumValN(LLVMAssumeType::check, "check",
                                 "enable checking of assume statements")));
 
+const llvm::cl::opt<bool> SmackOptions::WrappedIntegerEncoding(
+    "wrapped-integer-encoding",
+    llvm::cl::desc(
+        "Enable wrapped integer arithmetic and signedness-aware comparison"));
+
 bool SmackOptions::isEntryPoint(std::string name) {
   for (auto EP : EntryPoints)
     if (name == EP)

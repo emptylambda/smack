@@ -32,6 +32,7 @@ public:
   static const llvm::cl::opt<bool> IntegerOverflow;
   static const llvm::cl::opt<LLVMAssumeType> LLVMAssumes;
   static const llvm::cl::opt<bool> AddTiming;
+  static const llvm::cl::opt<bool> WrappedIntegerEncoding;
 
   static bool isEntryPoint(std::string);
 };
